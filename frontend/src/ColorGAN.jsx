@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 
-const API_BASE = "https://colorgan-ai-image-colorization.onrender.com";
+const API_BASE = "https://colorgan-ai-image-colorization-production.up.railway.app";
 
 // ── Styles ────────────────────────────────────────────────────
 const globalStyles = `
