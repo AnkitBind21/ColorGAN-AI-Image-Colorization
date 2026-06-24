@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from "react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://colorgan-ai-image-colorization.onrender.com";
 
 // ── Styles ────────────────────────────────────────────────────
 const globalStyles = `
@@ -218,7 +218,7 @@ export default function ColorGAN() {
       setStatus({ message: `✓ Colorization complete in ${elapsed}s`, type: "success" });
     } catch (err) {
       const msg = err.message.includes("Failed to fetch")
-        ? "Cannot connect to backend (http://localhost:5000). Is Flask running?"
+        ? "Cannot connect to backend. Please try again in a few moments."
         : err.message;
       setStatus({ message: `Error: ${msg}`, type: "error" });
     } finally {
