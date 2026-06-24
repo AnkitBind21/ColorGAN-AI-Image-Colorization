@@ -13,7 +13,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from PIL import Image
 import numpy as np
-
+import download_model
 # Add models to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "models"))
 from generator  import UNetGenerator
