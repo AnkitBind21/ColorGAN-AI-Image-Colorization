@@ -3,6 +3,7 @@ torchvision>=0.15.0
 numpy>=1.24.0
 opencv-python-headless>=4.8.0
 Pillow>=10.0.0
-gradio
+flask>=3.0.0
+flask-cors>=4.0.0
 gdown
 scikit-image>=0.21.0
