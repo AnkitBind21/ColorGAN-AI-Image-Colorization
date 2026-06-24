@@ -19,3 +19,4 @@ results/*.png
 backend/results/
 
 backend/results/*.jpg
+.vercel
