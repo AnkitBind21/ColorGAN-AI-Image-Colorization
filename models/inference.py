@@ -12,8 +12,8 @@ import cv2
 from PIL import Image
 
 sys.path.insert(0, os.path.dirname(__file__))
-from models.generator import UNetGenerator
-from models.dataset import lab_to_rgb
+from generator import UNetGenerator
+from dataset import lab_to_rgb
 
 def load_generator(checkpoint_path: str, device: str = "cpu") -> UNetGenerator:
     """Load generator from checkpoint."""
