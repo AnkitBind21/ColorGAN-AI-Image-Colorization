@@ -16,7 +16,7 @@ import numpy as np
 import download_model
 # Add models to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "models"))
-from generator  import UNetGenerator
+
 from inference  import load_generator, colorize_image
 
 app = Flask(__name__)
