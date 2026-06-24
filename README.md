@@ -8,18 +8,38 @@ The system includes a Flask backend for model inference and a React-based fronte
 
 ---
 
+## Live Demo
+
+**Frontend:**
+https://YOUR-VERCEL-URL.vercel.app
+
+**Backend API:**
+https://colorgan-ai-image-colorization-production.up.railway.app
+
+---
+
+## Application Preview
+
+![ColorGAN Interface](screenshots/colorgan-dashboard.png)
+
+The web interface allows users to upload grayscale images, generate colorized outputs using a Conditional GAN model, compare results visually, and download the generated image.
+
+---
+
 ## Features
 
 * Conditional GAN-based image colorization
 * U-Net Generator architecture with skip connections
 * PatchGAN Discriminator for adversarial training
 * LAB color space processing
-* Mixed Precision (AMP) training for improved performance
+* Mixed Precision (AMP) training
 * Real-time inference using Flask API
-* React frontend with drag-and-drop image upload
+* Modern React frontend
+* Drag-and-drop image upload
 * Side-by-side image comparison
 * Downloadable colorized outputs
 * Training metrics tracking and evaluation
+* Cloud deployment using Railway and Vercel
 
 ---
 
@@ -68,10 +88,44 @@ Grayscale Image
 
 ---
 
+## Technology Stack
+
+### Deep Learning
+
+* PyTorch
+* TorchVision
+* NumPy
+* OpenCV
+* Pillow
+* scikit-image
+
+### Backend
+
+* Flask
+* Flask-CORS
+
+### Frontend
+
+* React
+* Vite
+* JavaScript
+* CSS
+
+### Deployment
+
+| Service         | Platform |
+| --------------- | -------- |
+| Frontend        | Vercel   |
+| Backend         | Railway  |
+| Model Inference | PyTorch  |
+| API             | Flask    |
+
+---
+
 ## Project Structure
 
 ```text
-COLORGAN/
+ColorGAN-AI-Image-Colorization/
 │
 ├── backend/
 │   └── app.py
@@ -92,33 +146,12 @@ COLORGAN/
 ├── results/
 │   └── train_history.json
 │
+├── screenshots/
+│   └── colorgan-dashboard.png
+│
 ├── requirements.txt
 └── README.md
 ```
-
----
-
-## Technology Stack
-
-### Deep Learning
-
-* PyTorch
-* TorchVision
-* NumPy
-* OpenCV
-* Pillow
-
-### Backend
-
-* Flask
-* Flask-CORS
-
-### Frontend
-
-* React
-* Vite
-* JavaScript
-* CSS
 
 ---
 
@@ -140,12 +173,12 @@ COLORGAN/
 
 ## Results
 
-| Metric | Best Score |
-| ------ | ---------- |
-| PSNR   | 25.64      |
-| SSIM   | 0.90       |
+| Metric | Score    |
+| ------ | -------- |
+| PSNR   | 25.64 dB |
+| SSIM   | 0.90     |
 
-The model successfully learns chrominance reconstruction from grayscale images and generates visually plausible colorized outputs through adversarial training.
+The trained Conditional GAN successfully reconstructs plausible color information from grayscale inputs while preserving image structure and semantic consistency. The model demonstrates strong perceptual quality on unseen test images and achieves competitive PSNR and SSIM scores.
 
 ---
 
@@ -224,16 +257,19 @@ python models/inference.py \
 * Mobile deployment
 * Cloud inference API
 * Video colorization support
+* Multi-style colorization modes
+* Historical photo restoration
 
 ---
 
 ## Author
 
-Ankit Bind
+**Ankit Bind**
 
 B.Sc. Information Technology
-
 Mumbai University
+
+Machine Learning • Deep Learning • Computer Vision • Artificial Intelligence
 
 ---
 
